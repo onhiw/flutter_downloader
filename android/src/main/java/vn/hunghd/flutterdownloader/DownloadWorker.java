@@ -274,8 +274,8 @@ public class DownloadWorker extends Worker implements MethodChannel.MethodCallHa
                 log("Open connection to " + url);
                 httpConn = (HttpURLConnection) resourceUrl.openConnection();
 
-                httpConn.setConnectTimeout(100000);
-                httpConn.setReadTimeout(100000);
+                httpConn.setConnectTimeout(1800000);
+                httpConn.setReadTimeout(1800000);
                 httpConn.setInstanceFollowRedirects(false);   // Make the logic below easier to detect redirections
                 httpConn.setRequestProperty("User-Agent", "Mozilla/5.0...");
 
